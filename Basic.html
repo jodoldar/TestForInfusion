@@ -39,7 +39,7 @@ window.onload = function () {
 			//MIDI.noteOn(0, note1, velocity, delay);
 			//MIDI.noteOff(0, note1, delay + 0.75);
 			MIDI.chordOn(0, [note1, note2, note3], velocity, delay)
-			MIDI.chordOff(0, [note1, note2, note3], delay)
+			MIDI.chordOff(0, [note1, note2, note3], delay + 0.75)
 		}
 	});
 };
