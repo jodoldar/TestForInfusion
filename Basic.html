@@ -36,8 +36,8 @@ window.onload = function () {
 			var velocity = 127; // how hard the note hits
 			// play the note
 			MIDI.setVolume(0, 127);
-			//MIDI.noteOn(0, note1, velocity, delay);
-			//MIDI.noteOff(0, note1, delay + 0.75);
+			MIDI.noteOn(0, note1, velocity, delay);
+			MIDI.noteOff(0, note1, delay + 0.75);
 			MIDI.chordOn(0, [note1, note2, note3], velocity, delay);
 			MIDI.chordOff(0, [note1, note2, note3], delay + 0.75);
 		}
