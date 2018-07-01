@@ -30,16 +30,36 @@ window.onload = function () {
 		onsuccess: function() {
 			var delay = 0; // play one note every quarter second
 			//DO  MAYOR
-			var note1 = 72; // the MIDI note
-			var note2 = 76;
-			var note3 = 79;
+			var do3 = 60;
+			var re3 = 62;
+			var mi3 = 64;
+			var fa3 = 65;
+			var sol3 = 67;
+			var la3 = 69;
+			var si3 = 71;
+			var do4 = 72; // the MIDI note
+			var re4 = 74;
+			var mi4 = 76;
+			var fa4 = 77;
+			var sol4 = 79;
+			var la4 = 81;
+			var si4 = 83;
+			var do5 = 84;
 			var velocity = 127; // how hard the note hits
 			// play the note
 			MIDI.setVolume(0, 127);
-			MIDI.noteOn(0, note1, velocity, delay);
-			MIDI.noteOff(0, note1, delay + 0.75);
-			MIDI.chordOn(0, [note1, note2, note3], velocity, delay);
-			MIDI.chordOff(0, [note1, note2, note3], delay + 0.75);
+			MIDI.noteOn(0, do4, velocity, 0);
+			MIDI.noteOff(0, do4, 1);
+			MIDI.noteOn(0, do4, velocity, 1);
+			MIDI.noteOff(0, do4, 2);
+			MIDI.chordOn(0, [do3, sol3], velocity, 0);
+			MIDI.chordOff(0, [do3, sol3], 2);
+			MIDI.noteOn(0, sol4, velocity, 2);
+			MIDI.noteOff(0, sol4, 3);
+			MIDI.noteOn(0, sol4, velocity, 3);
+			MIDI.noteOff(0, sol4, 4);
+			MIDI.chordOff(0, [mi3, sol3], velocity, 2);
+			MIDI.chordOff(0, [mi3, sol3], 4);
 		}
 	});
 };
