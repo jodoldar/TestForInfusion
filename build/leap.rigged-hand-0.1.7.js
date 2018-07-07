@@ -447,7 +447,7 @@ function onReady(handler) {
         handMesh.bonesBySkinIndex[i] = bone;
         return i++;
       });
-      handMesh.boneLabels = {};
+      //handMesh.boneLabels = {};
       if (scope.boneLabels) {/*
         handMesh.traverse(function(bone) {
           var attribute, label, value, _base, _name, _ref, _results;
