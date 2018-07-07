@@ -549,10 +549,10 @@ function onReady(handler) {
       }
       palm.worldDirection = new THREE.Vector3;
       palm.worldQuaternion = handMesh.quaternion;
-      if (scope.boneLabels) {
+      if (scope.boneLabels) {/*
         handMesh.children[0].traverse(function(bone) {
           return document.body.appendChild(handMesh.boneLabels[bone.id]);
-        });
+        });*/
       }
       return controller.emit('riggedHand.meshAdded', handMesh, leapHand);
     };
