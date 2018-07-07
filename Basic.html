@@ -16,6 +16,8 @@
 	<!-- utils -->
 	<script src="./MIDI/js/util/dom_request_xhr.js" type="text/javascript"></script>
 	<script src="./MIDI/js/util/dom_request_script.js" type="text/javascript"></script>
+
+	<script src="//unpkg.com/aframe-leap-hands/dist/aframe-leap-hands.min.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -76,5 +78,9 @@ window.onload = function () {
 };
 
 </script>
+	<a-entity camera="near: 0.01" look-controls position="0 1.5 0">
+		<a-entity leap-hand="hand: left"></a-entity>
+		<a-entity leap-hand="hand: right"></a-entity>
+	</a-entity>
 </body>
 </html>
