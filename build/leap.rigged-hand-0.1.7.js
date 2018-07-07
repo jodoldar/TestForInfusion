@@ -431,7 +431,7 @@ function onReady(handler) {
       data.materials[0].skinning = true;
       data.materials[0].transparent = true;
       data.materials[0].opacity = 0.7;
-      data.materials[0].emissive.setHex(0x888888);
+      data.materials[0].emissive.setHex(0xFF00FF);
       data.materials[0].vertexColors = THREE.VertexColors;
       data.materials[0].depthTest = true;
       _extend(data.materials[0], scope.materialOptions);
