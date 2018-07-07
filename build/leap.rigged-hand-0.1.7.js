@@ -566,10 +566,10 @@ function onReady(handler) {
         handMesh.helper = null;
       }
       spareMeshes[leapHand.type].push(handMesh);
-      if (scope.boneLabels) {
+      if (scope.boneLabels) {/*
         handMesh.children[0].traverse(function(bone) {
           return document.body.removeChild(handMesh.boneLabels[bone.id]);
-        });
+        });*/
       }
       controller.emit('riggedHand.meshRemoved', handMesh, leapHand);
       if (scope.renderFn) {
@@ -656,7 +656,7 @@ function onReady(handler) {
             handMesh.helper.update();
           }
           scope.positionDots(leapHand, handMesh);
-          if (scope.boneLabels) {
+          if (scope.boneLabels) {/*
             palm.traverse(function(bone) {
               var element, screenPosition;
               if (element = handMesh.boneLabels[bone.id]) {
@@ -665,7 +665,7 @@ function onReady(handler) {
                 element.style.bottom = "" + screenPosition.y + "px";
                 return element.innerHTML = scope.boneLabels(bone, leapHand) || '';
               }
-            });
+            });*/
           }
           if (scope.boneColors) {
             geometry = handMesh.geometry;
