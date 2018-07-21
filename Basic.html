@@ -49,6 +49,7 @@ window.onload = function () {
 			var do5 = 84;
 			var velocity = 127; // how hard the note hits
 			// play the note
+			MIDI.programChange(0, MIDI.GeneralMIDI.byName["cello"].number);
 			MIDI.setVolume(0, 127);
 			MIDI.noteOn(0, do4, velocity, 0);
 			MIDI.noteOff(0, do4, 1);
